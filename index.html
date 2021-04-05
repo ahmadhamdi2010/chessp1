@@ -14,6 +14,8 @@
             .chess-board td { width: 1.5em; height: 1.5em; text-align: center; font-size: 32px; line-height: 0;}
             .chess-board .light { background: #eee; }
             .chess-board .dark { background: #aaa; }
+            .chess-board .taken { background: rgb(34, 34, 34); }
+
         </style>
     </head>
     <body>
@@ -32,94 +34,96 @@
                 </tr>
                 <tr>
                     <th>8</th>
-                    <td id="a8" class="light"></td>
-                    <td id="b8" class="dark"></td>
-                    <td id="c8" class="light"></td>
-                    <td id="d8" class="dark"></td>
-                    <td id="e8" class="light"></td>
-                    <td id="f8" class="dark"></td>
-                    <td id="g8" class="light"></td>
-                    <td id="h8" class="dark"></td>
+                    <td id="07" class="light"></td>
+                    <td id="17" class="dark"></td>
+                    <td id="27" class="light"></td>
+                    <td id="37" class="dark"></td>
+                    <td id="47" class="light"></td>
+                    <td id="57" class="dark"></td>
+                    <td id="67" class="light"></td>
+                    <td id="77" class="dark"></td>
                 </tr>
                 <tr>
                     <th>7</th>
-                    <td id="a7" class="dark"></td>
-                    <td id="b7" class="light"></td>
-                    <td id="c7" class="dark"></td>
-                    <td id="d7" class="light"></td>
-                    <td id="e7" class="dark"></td>
-                    <td id="f7" class="light"></td>
-                    <td id="g7" class="dark"></td>
-                    <td id="h7" class="light"></td>
+                    <td id="06" class="dark"></td>
+                    <td id="16" class="light"></td>
+                    <td id="26" class="dark"></td>
+                    <td id="36" class="light"></td>
+                    <td id="46" class="dark"></td>
+                    <td id="56" class="light"></td>
+                    <td id="66" class="dark"></td>
+                    <td id="76" class="light"></td>
                 </tr>
                 <tr>
                     <th>6</th>
-                    <td id="a6" class="light"></td>
-                    <td id="b6" class="dark"></td>
-                    <td id="c6" class="light"></td>
-                    <td id="d6" class="dark"></td>
-                    <td id="e6" class="light"></td>
-                    <td id="f6" class="dark"></td>
-                    <td id="g6" class="light"></td>
-                    <td id="h6" class="dark"></td>
+                    <td id="05" class="light"></td>
+                    <td id="15" class="dark"></td>
+                    <td id="25" class="light"></td>
+                    <td id="35" class="dark"></td>
+                    <td id="45" class="light"></td>
+                    <td id="55" class="dark"></td>
+                    <td id="65" class="light"></td>
+                    <td id="75" class="dark"></td>
                 </tr>
                 <tr>
                     <th>5</th>
-                    <td id="a5" class="dark"></td>
-                    <td id="b5" class="light"></td>
-                    <td id="c5" class="dark"></td>
-                    <td id="d5" class="light"></td>
-                    <td id="e5" class="dark"></td>
-                    <td id="f5" class="light"></td>
-                    <td id="g5" class="dark"></td>
-                    <td id="h5" class="light"></td>
+                    <td id="04" class="dark"></td>
+                    <td id="14" class="light"></td>
+                    <td id="24" class="dark"></td>
+                    <td id="34" class="light"></td>
+                    <td id="44" class="dark"></td>
+                    <td id="54" class="light"></td>
+                    <td id="64" class="dark"></td>
+                    <td id="74" class="light"></td>
                 </tr>
                 <tr>
                     <th>4</th>
-                    <td id="a4" class="light"></td>
-                    <td id="b4" class="dark"></td>
-                    <td id="c4" class="light"></td>
-                    <td id="d4" class="dark"></td>
-                    <td id="e4" class="light"></td>
-                    <td id="f4" class="dark"></td>
-                    <td id="g4" class="light"></td>
-                    <td id="h4" class="dark"></td>
+                    <td id="03" class="light"></td>
+                    <td id="13" class="dark"></td>
+                    <td id="23" class="light"></td>
+                    <td id="33" class="dark"></td>
+                    <td id="43" class="light"></td>
+                    <td id="53" class="dark"></td>
+                    <td id="63" class="light"></td>
+                    <td id="73" class="dark"></td>
                 </tr>
                 <tr>
                     <th>3</th>
-                    <td id="a3" class="dark"></td>
-                    <td id="b3" class="light"></td>
-                    <td id="c3" class="dark"></td>
-                    <td id="d3" class="light"></td>
-                    <td id="e3" class="dark"></td>
-                    <td id="f3" class="light"></td>
-                    <td id="g3" class="dark"></td>
-                    <td id="h3" class="light"></td>
+                    <td id="02" class="dark"></td>
+                    <td id="12" class="light"></td>
+                    <td id="22" class="dark"></td>
+                    <td id="32" class="light"></td>
+                    <td id="42" class="dark"></td>
+                    <td id="52" class="light"></td>
+                    <td id="62" class="dark"></td>
+                    <td id="72" class="light"></td>
                 </tr>
                 <tr>
                     <th>2</th>
-                    <td id="a2" class="light"></td>
-                    <td id="b2" class="dark"></td>
-                    <td id="c2" class="light"></td>
-                    <td id="d2" class="dark"></td>
-                    <td id="e2" class="light"></td>
-                    <td id="f2" class="dark"></td>
-                    <td id="g2" class="light"></td>
-                    <td id="h2" class="dark"></td>
+                    <td id="01" class="light"></td>
+                    <td id="11" class="dark"></td>
+                    <td id="21" class="light"></td>
+                    <td id="31" class="dark"></td>
+                    <td id="41" class="light"></td>
+                    <td id="51" class="dark"></td>
+                    <td id="61" class="light"></td>
+                    <td id="71" class="dark"></td>
                 </tr>
                 <tr>
                     <th>1</th>
-                    <td id="a1" class="dark"></td>
-                    <td id="b1" class="light"></td>
-                    <td id="c1" class="dark"></td>
-                    <td id="d1" class="light"></td>
-                    <td id="e1" class="dark"></td>
-                    <td id="f1" class="light"></td>
-                    <td id="g1" class="dark"></td>
-                    <td id="h1" class="light"></td>
+                    <td id="00" class="dark"></td>
+                    <td id="10" class="light"></td>
+                    <td id="20" class="dark"></td>
+                    <td id="30" class="light"></td>
+                    <td id="40" class="dark"></td>
+                    <td id="50" class="light"></td>
+                    <td id="60" class="dark"></td>
+                    <td id="70" class="light"></td>
                 </tr>
             </tbody>
         </table>
+        <div>        <h2 class="start-btn">start</h2>
+        </div>
     </body>
     <script src="app.js"></script>
 </html>

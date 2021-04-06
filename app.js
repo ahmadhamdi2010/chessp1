@@ -74,21 +74,31 @@ function moveWhite(destination) {
 
 }
 
-
 function displayOptions(currentPsition){
 
     var y = Math.trunc(currentPsition%10);
-
     var x = Math.trunc((currentPsition/10)%10);
 
     var options = [-1,-1,-1,-1,-1,-1,-1,-1];
 
-    console.log(y);
+    options[0] = '' +(x+1) + (y+2) ;
+    options[1] = '' +(x+2) + (y+1) ;
+    options[2] = '' +(x+1) + (y-2) ;
+    options[3] = '' +(x+2) + (y-1) ;
+    options[4] = '' +(x-1) + (y+2) ;
+    options[5] = '' +(x-2) + (y+1) ;
+    options[6] = '' +(x-1) + (y-2) ;
+    options[7] = '' +(x-2) + (y-1) ;
+
+
+    for(i=0;i<8;i++){
+        var y = Math.trunc(options[i]%10);
+        var x = Math.trunc((options[i]/10)%10);
+        if(0<=x&&x<8&&0<=y&&y<8){
+            document.getElementById("" +x+y).classList.add('option');
+        }
+    }
     
-    console.log(x);
-
-    if((y+2)<8)
-
 
 }
 
@@ -96,5 +106,5 @@ function displayOptions(currentPsition){
 
 
 
-document.getElementById("h1").addEventListener("click", displayDate);
+//document.getElementById("h1").addEventListener("click", displayDate);
 

@@ -20,11 +20,17 @@ function updateBoard(board) {
             if(board[i][j]==1){
                 console.log("" +i+j);
                 document.getElementById("" +i+j).innerHTML = '♞';
+                document.getElementById("" +i+j).classList.add('currentB');
+
             }else if(board[i][j]==2){
                 console.log("" +i+j);
                 document.getElementById("" +i+j).innerHTML = '♘';
+                document.getElementById("" +i+j).classList.add('currentW');
             }else if(board[i][j]==5){
-                document.getElementById("" +i+j).classList.toggle('taken');
+                document.getElementById("" +i+j).innerHTML = '';
+                document.getElementById("" +i+j).classList.add('taken');
+                document.getElementById("" +i+j).classList.remove('currentW');
+                document.getElementById("" +i+j).classList.remove('currentB');
             }else if(board[i][j]==0){
                 document.getElementById("" +i+j).innerHTML = '';
             }
@@ -32,6 +38,7 @@ function updateBoard(board) {
     }   
 }
 
+updateBoard(board);
 
 function moveBlack(destination) {
 
@@ -39,7 +46,7 @@ function moveBlack(destination) {
         for(j=0; j<8 ; j++){
 
             if(board[i][j]==1){
-                board[i][j]=0;
+                board[i][j]=5;
             }if(''+i+j == destination){
                 board[i][j]=1;
             }
@@ -56,7 +63,7 @@ function moveWhite(destination) {
         for(j=0; j<8 ; j++){
 
             if(board[i][j]==2){
-                board[i][j]=0;
+                board[i][j]=5;
             }if(''+i+j == destination){
                 board[i][j]=2;
             }
@@ -70,17 +77,24 @@ function moveWhite(destination) {
 
 function displayOptions(currentPsition){
 
-}
+    var y = Math.trunc(currentPsition%10);
 
-function markUsedPosition(position) {
+    var x = Math.trunc((currentPsition/10)%10);
+
+    var options = [-1,-1,-1,-1,-1,-1,-1,-1];
+
+    console.log(y);
     
+    console.log(x);
+
+    if((y+2)<8)
+
+
 }
 
-function name(params) {
-    
-}
 
 
 
-//document.getElementById("h1").addEventListener("click", displayDate);
+
+document.getElementById("h1").addEventListener("click", displayDate);
 

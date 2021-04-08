@@ -16,6 +16,7 @@ var blackLocation = 07;
 var options = ["","","","","","","",""];
 var op = 1;
 
+document.getElementById("start-btn").addEventListener('click',updateBoard(board));
 
 function updateBoard(board) {
     
@@ -186,5 +187,6 @@ function checkwin() {
     if(op==0){
         alert("you lost "+win);
     }
+
     
 }
